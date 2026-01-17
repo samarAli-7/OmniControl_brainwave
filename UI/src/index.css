@@ -1,0 +1,55 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap');
+
+@theme {
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+:root {
+  background-color: #050505; 
+  color: #fbbf24; 
+  font-family: var(--font-mono);
+  /* This prevents the "bounce" scroll on trackpads */
+  overflow: hidden; 
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background-image: 
+    linear-gradient(rgba(251, 191, 36, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(251, 191, 36, 0.02) 1px, transparent 1px);
+  background-size: 4vh 4vh; /* Grid scales with screen height */
+}
+
+.tactical-panel {
+  background: rgba(10, 10, 12, 0.95);
+  border: 1px solid rgba(251, 191, 36, 0.15);
+  transition: all 0.2s ease-in-out;
+}
+
+.tactical-panel:hover {
+  border-color: #fbbf24;
+  box-shadow: 0 0 20px rgba(251, 191, 36, 0.2);
+  transform: translateY(-2px);
+}
+
+.scan-line {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #fbbf24, transparent);
+  opacity: 0.15;
+  animation: scan 4s linear infinite;
+}
+
+@keyframes scan {
+  0% { top: 0%; }
+  100% { top: 100%; }
+}
+
+.active-warning {
+  background: rgba(251, 191, 36, 0.08) !important;
+  border-color: #fbbf24 !important;
+  box-shadow: inset 0 0 15px rgba(251, 191, 36, 0.1);
+}

@@ -1,0 +1,26 @@
+{
+  "timestamp": 1737100000000,
+  "version": "1.0",
+  "mappings": {
+    "one": "cursor_nav",
+    "two": "media_play",
+    "three": "brightness_up",
+    "four": "brightness_down",
+    "five": "snapshot",
+    "fist": "tab_switch",
+    "thumbs_up": "volume_up",
+    "thumbs_down": "volume_down"
+  },
+  "active": true,
+  "metadata": {
+    "team": "BYTEFORCE",
+    "competition": "Brainwave 2.0",
+    "mode": "GESTURE_MAPPING",
+    "sync_status": "synced",
+    "hw_status": {
+      "mouse_nav": true,
+      "left_active": false,
+      "right_active": false
+    }
+  }
+}
